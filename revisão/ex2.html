@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários sobre Dispositivos</title>
+    <script>
+        function mostrarComentario() {
+            const dispositivo = document.getElementById("dispositivo").value;
+            let comentario = "";
+            let apresentacao = "";
+
+            switch (dispositivo) {
+                case "Fita Cassete":
+                    apresentacao = "A Fita Cassete é um dispositivo de armazenamento de áudio.";
+                    comentario = "Foi muito popular nos anos 80 e 90 para armazenar músicas.";
+                    break;
+                case "DVD":
+                    apresentacao = "O DVD é um disco óptico usado para armazenar vídeos e dados.";
+                    comentario = "Revolucionou o armazenamento de vídeos com qualidade superior ao VHS.";
+                    break;
+                case "CD":
+                    apresentacao = "O CD é um disco óptico usado para armazenar músicas e dados.";
+                    comentario = "Foi amplamente usado nos anos 90 e 2000.";
+                    break;
+                default:
+                    apresentacao = "Selecione um dispositivo válido.";
+                    comentario = "";
+            }
+
+            document.getElementById("apresentacao").innerText = apresentacao;
+            document.getElementById("comentario").innerText = comentario;
+        }
+    </script>
+</head>
+<body>
+    <h1>Comentários sobre Dispositivos</h1>
+    <label for="dispositivo">Escolha um dispositivo:</label>
+    <select id="dispositivo" onchange="mostrarComentario()">
+        <option value="">--Selecione--</option>
+        <option value="Fita Cassete">Fita Cassete</option>
+        <option value="DVD">DVD</option>
+        <option value="CD">CD</option>
+    </select>
+    <h2 id="apresentacao"></h2>
+    <p id="comentario"></p>
+</body>
+</html>
