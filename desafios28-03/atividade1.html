@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu do Café Expresso</title>
+  <script src="atividade1.js"></script>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f8f9fa; color: #343a40; text-align: center; padding: 20px;">
+    <h1 style="font-size: 2.5em; margin-bottom: 20px;">☕ Bem-vindo ao Café Expresso ☕</h1>
+    <button onclick="realizarPedido()" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; font-size: 1.2em; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+        Fazer Pedido
+    </button>
+    <script>
+        document.querySelector('button').addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#0056b3';
+        });
+        document.querySelector('button').addEventListener('mouseout', function() {
+            this.style.backgroundColor = '#007bff';
+        });
+    </script>
+</body>
+</html>

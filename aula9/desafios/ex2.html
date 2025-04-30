@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Notas</title>
+    <script>
+        function classificarNota() {
+            let continuar = true;
+
+            while (continuar) {
+                const nota = parseFloat(prompt("Digite uma nota de 0 a 10:"));
+
+                if (isNaN(nota) || nota < 0 || nota > 10) {
+                    alert("Por favor, insira uma nota válida entre 0 e 10.");
+                    continue;
+                }
+
+                let classificacao;
+
+                switch (true) {
+                    case (nota >= 9):
+                        classificacao = "A";
+                        break;
+                    case (nota >= 7):
+                        classificacao = "B";
+                        break;
+                    case (nota >= 5):
+                        classificacao = "C";
+                        break;
+                    case (nota >= 3):
+                        classificacao = "D";
+                        break;
+                    default:
+                        classificacao = "F";
+                }
+
+                alert(`A classificação da nota ${nota} é: ${classificacao}`);
+
+                continuar = confirm("Deseja classificar outra nota?");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Classificação de Notas</h1>
+    <button onclick="classificarNota()">Classificar Nota</button>
+</body>
+</html>

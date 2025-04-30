@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #db18a4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #dc2068 3px solid;
+        }
+        header a {
+            color: #000000;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .plans {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .plan {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+        }
+        .plan h2 {
+            margin-bottom: 20px;
+        }
+        .plan p {
+            margin-bottom: 20px;
+        }
+        .plan button {
+            background: #333;
+            color: #fff;
+            border: 0;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Plataforma de Streaming</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Planos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="showcase">
+        <div class="container">
+            <h1>Bem-vindo A plataforma de streaming </h1>
+            <p>Aproveite os melhores filmes e programas de TV a qualquer hora e em qualquer lugar.</p>
+        </div>
+    </section>
+    <section class="plans">
+        <div class="plan">
+            <h2>Plano Básico</h2>
+            <p>R$9,99/mês</p>
+            <button onclick="Assinar('Plano Básico')">Assinar</button>
+        </div>
+        <div class="plan">
+            <h2>Plano Standart</h2>
+            <p>R$13,99/mês</p>
+            <button onclick="Assinar('Plano Standart')">Assinar</button>
+        </div>
+        <div class="plan">
+            <h2>Plano Premium</h2>
+            <p>R$17,99/mês</p>
+            <button onclick="Assinar('Plano Premium')">Assinar</button>
+        </div>
+    </section>
+  <script src="desafios6.js"></script>
+</body>
+</html></div></section></div>

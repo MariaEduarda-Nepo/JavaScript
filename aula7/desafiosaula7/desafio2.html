@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retornar somente o maior valor da lista</title>
+</head>
+<body>
+    <h1>Encontre o maior valor</h1>
+    <input type="text" id="numbers" placeholder="Digite os números separados por vírgula">
+    <button onclick="findMax()">Encontrar Maior Valor</button>
+    <p id="result"></p>
+
+    <script>
+    function findMax() {
+        const input = document.getElementById('numbers').value;
+        const numbers = input.split(',').map(Number);
+        const maxNumber = Math.max(...numbers);
+        document.getElementById('result').innerText = `O maior valor é: ${maxNumber}`;
+    }
+    </script>
+</body>
+</html>

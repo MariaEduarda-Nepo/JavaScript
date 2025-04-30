@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 - Cálculo de Notas</title>
+    <link rel="stylesheet" href="desafio3.css">
+   <script src="desafio3.js"></script>
+</head>
+<body>
+    <h1>Atividade 3 - Cálculo de Notas</h1>
+    <form onsubmit="event.preventDefault(); calcularNotas();">
+        <label for="nome">Nome do Aluno:</label>
+        <input type="text" id="nome" required><br><br>
+
+        <label for="nota1">Nota 1:</label>
+        <input type="number" id="nota1" step="0.01" required><br><br>
+
+        <label for="nota2">Nota 2:</label>
+        <input type="number" id="nota2" step="0.01" required><br><br>
+
+        <label for="nota3">Nota 3:</label>
+        <input type="number" id="nota3" step="0.01" required><br><br>
+
+        <label for="trabalhos">Trabalhos:</label>
+        <input type="number" id="trabalhos" step="0.01" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>

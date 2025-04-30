@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas</title>
+    <script>
+        function calcularPreco() {
+            let nomeCliente = prompt("Digite o seu nome:");
+            if (!nomeCliente) {
+                alert("Nome inválido!");
+                return;
+            }
+
+            let tipoRoupa = prompt("Digite o tipo de roupa (camisa, calça, vestido):").toLowerCase();
+            let preco = 0;
+
+            switch (tipoRoupa) {
+                case "camisa":
+                    preco = 50;
+                    break;
+                case "calça":
+                    preco = 80;
+                    break;
+                case "vestido":
+                    preco = 120;
+                    break;
+                default:
+                    alert("Tipo de roupa inválido!");
+                    return;
+            }
+
+            let quantidade = parseInt(prompt("Digite a quantidade de peças:"));
+            if (isNaN(quantidade) || quantidade <= 0) {
+                alert("Quantidade inválida!");
+                return;
+            }
+
+            let precoTotal = preco * quantidade;
+
+            if (precoTotal > 100) {
+                precoTotal *= 0.9; // Aplicar desconto de 10%
+            }
+
+            alert(`Olá, ${nomeCliente}! O preço total com desconto (se aplicável) é: R$ ${precoTotal.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Loja de Roupas</h1>
+    <button onclick="calcularPreco()">Calcular Preço</button>
+</body>
+</html>

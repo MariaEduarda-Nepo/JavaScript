@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área</title>
+</head>
+<body>
+    <h1>Calculadora de Área</h1>
+    <form id="areaForm">
+        <label for="shape">Escolha a figura geométrica:</label>
+        <select id="shape" name="shape">
+            <option value="circle">Círculo</option>
+            <option value="square">Quadrado</option>
+            <option value="triangle">Triângulo</option>
+        </select>
+        <div id="dimensions"></div>
+        <button type="button" onclick="calculateArea()">Calcular Área</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        const dimensionsDiv = document.getElementById('dimensions');
+        const shapeSelect = document.getElementById('shape');
+
+        shapeSelect.addEventListener('change', () => {
+            const shape = shapeSelect.value;
+            dimensionsDiv.innerHTML = '';
+
+            switch (shape) {
+                case 'circle':
+                    dimensionsDiv.innerHTML = `
+                        <label for="radius">Raio:</label>
+                        <input type="number" id="radius" name="radius" required>
+                    `;
+                    break;
+                case 'square':
+                    dimensionsDiv.innerHTML = `
+                        <label for="side">Lado:</label>
+                        <input type="number" id="side" name="side" required>
+                    `;
+                    break;
+                case 'triangle':
+                    dimensionsDiv.innerHTML = `
+                        <label for="base">Base:</label>
+                        <input type="number" id="base" name="base" required>
+                        <label for="height">Altura:</label>
+                        <input type="number" id="height" name="height" required>
+                    `;
+                    break;
+            }
+        });
+
+        function calculateArea() {
+            const shape = shapeSelect.value;
+            let area = 0;
+
+            switch (shape) {
+                case 'circle':
+                    const radius = parseFloat(document.getElementById('radius').value);
+                    if (!isNaN(radius)) {
+                        area = Math.PI * Math.pow(radius, 2);
+                    }
+                    break;
+                case 'square':
+                    const side = parseFloat(document.getElementById('side').value);
+                    if (!isNaN(side)) {
+                        area = Math.pow(side, 2);
+                    }
+                    break;
+                case 'triangle':
+                    const base = parseFloat(document.getElementById('base').value);
+                    const height = parseFloat(document.getElementById('height').value);
+                    if (!isNaN(base) && !isNaN(height)) {
+                        area = (base * height) / 2;
+                    }
+                    break;
+            }
+
+            const result = document.getElementById('result');
+            if (area > 0) {
+                result.textContent = `A área da figura é: ${area.toFixed(2)}`;
+            } else {
+                result.textContent = 'Por favor, insira valores válidos.';
+            }
+        }
+    </script>
+</body>
+</html>
+</html>
+<script>
+    window.addEventListener('load', () => {
+        alert('Bem-vindo à Calculadora de Área! Escolha uma figura geométrica e insira os valores necessários.');
+    });
+</script>

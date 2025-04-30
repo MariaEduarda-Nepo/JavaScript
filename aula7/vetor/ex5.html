@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 5 - vetor</title>
+</head>
+<body>
+    <input type="text" id="vetorduplicatas" placeholder="Digite os valores do vetor separados por vírgula">
+    <button onclick="removerDuplicatasTela()">Remover Duplicatas</button>
+    <p id="resultadoduplicatas"></p>
+    <script>
+        function removerDuplicatasTela(){
+            const vetor = document.getElementById("vetorduplicatas").value.split(",").map(Number);
+            const vetorUnico = [...new Set(vetor)];
+            document.getElementById("resultadoduplicatas").innerHTML = "Vetor sem duplicatas: " + 
+            vetorUnico;
+        }
+    </script>
+</body>
+</html>

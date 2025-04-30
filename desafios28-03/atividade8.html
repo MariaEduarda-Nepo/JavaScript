@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Bom Sabor</title>
+</head>
+<body style="text-align: center;"> 
+  
+    <h1>🍕 Pizzaria Bom Sabor 🍕</h1>
+    <p>Promoção especial:</p>
+    <ul style="list-style: none; padding: 0;">
+        <li>🍕 Se o cliente pedir duas pizzas grandes, ganhe um refrigerante de 2 litros. 🥤</li>
+        <li>🍕 Se o cliente pedir uma pizza média e uma pizza pequena, ganha uma porção de pão de alho. 🥖</li>
+    </ul>
+
+    <form id="pedidoForm" style="display: inline-block; text-align: left;"></form>
+        <label for="pizza1">Escolha o tamanho da primeira pizza:</label>
+        <select id="pizza1" name="pizza1">
+            <option value="grande">Grande</option>
+            <option value="media">Média</option>
+            <option value="pequena">Pequena</option>
+        </select>
+        <br><br>
+        <label for="pizza2">Escolha o tamanho da segunda pizza:</label>
+        <select id="pizza2" name="pizza2">
+            <option value="grande">Grande</option>
+            <option value="media">Média</option>
+            <option value="pequena">Pequena</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="verificarBrinde()">Verificar Brinde</button>
+    </form>
+
+    <p id="resultado"></p>
+
+  <script src="atividade8.js"></script>
+</body>
+</html>

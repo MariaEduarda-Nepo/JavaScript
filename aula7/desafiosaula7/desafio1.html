@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular média do vetor</title>
+</head>
+<body>
+    <input type="text" id="CalcularMediaVetor" placeholder="Digite 9 numeros separados por virgula (3×3)">
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <p id="resultadoMedia"></p>
+
+    <script>
+        function calcularMedia() {
+            const input = document.getElementById('CalcularMediaVetor').value;
+            const numeros = input.split(',').map(Number);
+            const soma = numeros.reduce((acc, num) => acc + num, 0);
+            const media = soma / numeros.length;
+            document.getElementById('resultadoMedia').innerText = `A média é: ${media}`;
+        }
+    </script>
+</body>
+</html>

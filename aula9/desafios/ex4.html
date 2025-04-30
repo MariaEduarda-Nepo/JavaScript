@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estações do Ano</title>
+</head>
+<body>
+    <h1>Descubra a Estação do Ano</h1>
+    <button onclick="getSeason()">Ver Estação</button>
+    <p id="result"></p>
+
+    <script>
+        function getSeason() {
+            const month = parseInt(prompt("Digite um número de 1 a 12 para saber a estação correspondente:"));
+            let season;
+
+            switch (month) {
+                case 12:
+                case 1:
+                case 2:
+                    season = "Verão";
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    season = "Outono";
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    season = "Inverno";
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    season = "Primavera";
+                    break;
+                default:
+                    season = "Por favor, insira um número válido entre 1 e 12.";
+            }
+
+            document.getElementById('result').textContent = season;
+        }
+    </script>
+</body>
+</html>

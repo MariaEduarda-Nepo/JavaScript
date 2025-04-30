@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Cálculo de Aumento</title>
+    <script src="atividade3.js"></script>
+</head>
+<body style="text-align: center; font-family: Arial, sans-serif;">
+    <h1>🧸 Loja - Cálculo de Aumento 🛍️</h1>
+    <form onsubmit="event.preventDefault(); calcularTotal();" style="display: inline-block; text-align: left;">
+        <div>
+            <label for="quantidade-1">🪀 Produto A (Código 1 - R$ 100): </label>
+            <input type="number" id="quantidade-1" min="0">
+        </div>
+        <div>
+            <label for="quantidade-2">🎨 Produto B (Código 2 - R$ 200): </label>
+            <input type="number" id="quantidade-2" min="0">
+        </div>
+        <div>
+            <label for="quantidade-10">🚂 Produto C (Código 10 - R$ 300): </label>
+            <input type="number" id="quantidade-10" min="0">
+        </div>
+        <div>
+            <label for="quantidade-3">🧩 Produto D (Código 3 - R$ 400): </label>
+            <input type="number" id="quantidade-3" min="0">
+        </div>
+        <button type="submit" style="margin-top: 10px;">Calcular Total</button>
+    </form>
+    <p id="resultado" style="margin-top: 20px;"></p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo</title>
+    <link rel="stylesheet" href="desafio1.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .light {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 50%;
+            background-color: rgb(68, 57, 140);
+        }
+        #red {
+            background-color: gray;
+        }
+        #yellow {
+            background-color: gray;
+        }
+        #green {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador de Semáforo</h1>
+    <p>Digite um número (1: Vermelho, 2: Laranja, 3: Verde):</p>
+    <input type="number" id="inputValue" min="1" max="3">
+    <button onclick="changeLight()">Alterar</button>
+
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+
+  <script src="desafio1.js"></script>
+</body>
+</html>

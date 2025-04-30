@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h1::before {
+            content: "📦 ";
+        }
+        h1::after {
+            content: " 📊";
+        }
+        .low-stock {
+            color: red;
+            font-weight: bold;
+        }
+        /* Classe para indicar que o estoque está em uma boa quantidade */
+        .good-stock {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Controle de Estoque</h1>
+    <div>
+        <label for="product">Produto:</label>
+        <input type="text" id="product" placeholder="Digite o nome do produto">
+    </div>
+    <div>
+        <label for="quantity">Quantidade em Estoque:</label>
+        <input type="number" id="quantity" placeholder="Digite a quantidade">
+    </div>
+    <button onclick="checkStock()">Verificar Estoque</button>
+    <p id="result"></p>
+
+    <script src="atividade2.js"></script>
+</body>
+</html>

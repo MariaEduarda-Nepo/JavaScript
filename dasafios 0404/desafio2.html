@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Mecânica do Zé</title>
+    <link rel="stylesheet" href="desafio2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        .menu button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .summary {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fbffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mecânica do Zé</h1>
+    <p>Escolha um serviço abaixo:</p>
+    <div class="menu">
+        <button onclick="selectService('Troca de Óleo', 100)">Troca de Óleo - R$100</button>
+        <button onclick="selectService('Alinhamento', 80)">Alinhamento - R$80</button>
+        <button onclick="selectService('Balanceamento', 50)">Balanceamento - R$50</button>
+        <button onclick="selectService('Revisão Completa', 300)">Revisão Completa - R$300</button>
+    </div>
+    <form id="clientForm" onsubmit="generateSummary(event)">
+        <label for="clientName">Nome do Cliente:</label>
+        <input type="text" id="clientName" name="clientName" required>
+        <button type="submit">Finalizar</button>
+    </form>
+    <div id="summary" class="summary" style="display: none;"></div>
+
+    <script src="desafio2.js"></script>
+</body>
+</html></div>

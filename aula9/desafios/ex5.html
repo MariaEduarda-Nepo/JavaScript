@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânica de Carros</title>
+    <script>
+        function exibirInformacoes() {
+            const modelo = prompt("Digite o modelo do carro (Ex: Gol, Civic, Hilux):");
+            if (!modelo) {
+                alert("Você não digitou nenhum modelo.");
+                return;
+            }
+
+            let preco, ano, combustivel, servicos, valorServicos;
+
+            switch (modelo.toLowerCase()) {
+                case "gol":
+                    preco = "R$ 50.000";
+                    ano = "2022";
+                    combustivel = "Flex (Gasolina/Álcool)";
+                    break;
+                case "civic":
+                    preco = "R$ 120.000";
+                    ano = "2021";
+                    combustivel = "Gasolina";
+                    break;
+                case "hilux":
+                    preco = "R$ 250.000";
+                    ano = "2023";
+                    combustivel = "Diesel";
+                    break;
+                default:
+                    alert("Modelo não encontrado. Tente novamente.");
+                    return;
+            }
+
+            servicos = [
+                { nome: "Troca de óleo", valor: 200 },
+                { nome: "Alinhamento", valor: 150 },
+                { nome: "Balanceamento", valor: 100 }
+            ];
+
+            valorServicos = servicos.reduce((total, servico) => total + servico.valor, 0);
+
+            const resultado = `
+                <h3>Informações do Carro</h3>
+                <p><strong>Modelo:</strong> ${modelo}</p>
+                <p><strong>Preço:</strong> ${preco}</p>
+                <p><strong>Ano de Fabricação:</strong> ${ano}</p>
+                <p><strong>Tipo de Combustível:</strong> ${combustivel}</p>
+                <h3>Relatório de Serviços</h3>
+                <ul>
+                    ${servicos.map(servico => `<li>${servico.nome}: R$ ${servico.valor}</li>`).join("")}
+                </ul>
+                <p><strong>Valor Total dos Serviços:</strong> R$ ${valorServicos}</p>
+            `;
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Mecânica de Carros</h1>
+    <button onclick="exibirInformacoes()">Exibir Informações</button>
+    <div id="resultado"></div>
+</body>
+</html>
