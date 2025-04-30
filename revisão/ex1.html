@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Signos</title>
+</head>
+<body>
+    <h1>Descubra seu Signo</h1>
+
+    digite seu mês entre 1 e 12; <input type="number"
+    id="signo" min="1" max="12">
+    <button onclick="exibirsignos()">Ver Signos</button>
+    <p id="resultado"></p>
+
+    <script>
+        function exibirsignos() {
+            let mes = parseInt(document.getElementById("signo").value);
+            let resultado;
+
+            switch(mes) {
+                case 1:
+                resultado = "capricornio e Aquario";
+                break;
+
+                case 2:
+                resultado = "Aquario e Peixes"
+                break;
+
+                 case 3:
+                resultado = "peixes e aries"
+                break;
+
+                case 4:
+                resultado = "aries e touro"
+                break;
+
+                case 5:
+                resultado = "touro e gemeos"
+                break;
+
+                case 6:
+                resultado = "gemeos e cancer"
+                break;
+
+                case 7:
+                resultado = "cancer e leão"
+                break;
+
+                case 8:
+                resultado = "leão e virgem"
+                break;
+
+                case 9:
+                resultado = "virgem e libra"
+                break;
+
+                case 10:
+                resultado = "libra e escorpião"
+                break;
+
+                case 11:
+                resultado = "escorpião e sagitário"
+                break;
+
+                case 12:
+                resultado = "sagitário e capricórnio"
+                default:
+                resultado = "mes inválido"            
+
+
+
+
+            
+            }
+            document.getElementById("resultado").innerHTML =
+            `O mês selecionado foi ${mes} e o signo é ${resultado}`
+        }
+    </script>
+    
+</body>
+</html>
