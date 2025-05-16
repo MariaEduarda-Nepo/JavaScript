@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pizzaria.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2232/2232688.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <title>La Noche</title>
+<body>
+<div class="container">
+    <h1>Bem-Vindos a Pizzaria La Noche!</h1>
+  <div class="menu">
+        <button onclick="mostrarSecao('cadastro')">
+            <i class="fa-solid fa-pizza-slice"></i> Cadastrar Pizza
+          </button>
+        <button onclick="mostrarSecao('consulta')">
+            <i class="fas fa-search icon"></i> Consultar Pizza
+          </button>
+        <button onclick="mostrarSecao('alterar')">
+            <i class="fas fa-edit icon"></i> Alterar Pizza
+          </button>
+        <button onclick="mostrarSecao('venda')">
+            <i class="fa-solid fa-money-bill"></i> Registrar Venda
+          </button>
+        <button onclick="gerarRelatorioVendas()">
+            <i class="fa-solid fa-rectangle-list"></i> Relatório de Vendas
+            </button>
+    </div>
+    <style >
+    h1 {
+      color: red;
+      text-align: center;
+    }
+    </style>
+<!--Secao de cadastro-->
+    <div id="cadastro" class="hidden">
+      <div class="form group">
+          <label for="nome">Nome da Pizza:</label>
+          <input type="text" id="nome" placeholder="Digite o nome da pizza">
+      </div>
+      <div class="form group">
+          <label for="preco">Preço:</label>
+          <input type="number" id="preco" placeholder="Digite o preço da pizza">
+      </div>
+      <div class="form group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" placeholder="Digite a descrição da pizza">
+      </div>
+      <div id="resultado">
+
+      </div>
+  </div>
+<button onclick="criarCadastro()">Confirmar</button>
+</div>
+<style>
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu button:hover {
+  background: #c0392b;
+}
+
+.hidden {
+  display: none;
+}
+
+#cadastro {
+  margin-top: 20px;
+}
+
+#cadastro h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.form.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form.group label {
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #444;
+  text-align: left;
+}
+
+.form.group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#cadastro button {
+  width: 100%;
+  padding: 15px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s;
+}
+
+#cadastro button:hover {
+  background: #219150;
+}
+</style>
+    <script src="pizzaria.js"></script>
+</body>
+</html>
