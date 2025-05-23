@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pizzaria.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/2232/2232688.png" type="image/png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <title>La Noche</title>
+    <link  href="pizza1.png" rel="icon"  type="image/png"> 
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  
+    <title>Pizzaria La Noche</title>
 <body>
 <div class="container">
     <h1>Bem-Vindos a Pizzaria La Noche!</h1>
@@ -29,14 +31,9 @@
         <button onclick="gerarRelatorioVendas()">
             <i class="fa-solid fa-rectangle-list"></i> Relatório de Vendas
             </button>
-    </div>
-    <style >
-    h1 {
-      color: red;
-      text-align: center;
-    }
-    </style>
-<!--Secao de cadastro-->
+  </div>
+
+  <!--Secao de cadastro-->
     <div id="cadastro" class="hidden">
       <div class="form group">
           <label for="nome">Nome da Pizza:</label>
@@ -49,16 +46,31 @@
       <div class="form group">
             <label for="descricao">Descrição:</label>
             <input type="text" id="descricao" placeholder="Digite a descrição da pizza">
-      </div>
-      <div id="resultado">
-
-      </div>
+    </div>
+    <button onclick="criarCadastro()">Confirmar</button>
+    <label id="mensagem"></label>
   </div>
-<button onclick="criarCadastro()">Confirmar</button>
+  <!-- Seçao de consulta -->
+  <div id="consulta" class="hidden">
+    <h2>Consultar Pizzas</h2>
+    <input type="text" id="busca" placeholder="Buscar por Nome" oninput="buscarPizza()">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody id="lista-pizzas">
+            <!-- as pizzas serao exibidos aqui -->
+        </tbody>
+    </table>
+  </div>
 </div>
-<style>
 
-</style>
+
+
     <script src="pizzaria.js"></script>
 </body>
 </html>

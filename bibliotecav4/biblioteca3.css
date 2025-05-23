@@ -1,0 +1,168 @@
+body {
+    font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #444;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .menu button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .menu button:hover {
+    background-color: red;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  input, button {
+    width: auto;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  button {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  button:hover {
+    background-color: red;
+  }
+  
+  table {
+   
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center ;
+    
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+
+    #login {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      /* Fundo branco com transparência */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Sombra leve */
+      text-align: center;
+    }
+  
+    #login h1,
+    #login h2 {
+      margin-bottom: 20px;
+    }
+  
+    #login input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #e67e22;
+      /* Laranja queijo */
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #fff8e1;
+      /* Tom de massa de pizza */
+      color: #333;
+      text-align: center;
+    }
+  
+    #login button {
+      background-color: #27ae60;
+      /* Verde manjericão */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    #login button:hover {
+      background-color: #1e8449;
+      /* Verde mais escuro */
+    }
+
+        footer {
+          width: 100%;
+          text-align: center;
+          margin-top: 40px;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          background: transparent;
+        }
+    
+        .logo-senai {
+          width: 180px;
+          height: auto;
+          margin-bottom: 10px; }

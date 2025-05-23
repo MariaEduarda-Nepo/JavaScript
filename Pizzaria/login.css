@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: url('https://via.placeholder.com/1920x1080/FFD700/8B4513?text=Fundo+Pizzaria') no-repeat center center fixed; /* Substitua pela URL da sua imagem de fundo */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+.login-header h1 {
+    font-family: 'Lobster', cursive;
+    color: #D32F2F; /* Vermelho tomate */
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-header p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.login-form h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #666;
+    font-size: 1em;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    border-color: #D32F2F; /* Vermelho ao focar */
+    outline: none;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+}
+
+.login-button {
+    background-color: #4CAF50; /* Verde azeitona */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.login-footer {
+    margin-top: 25px;
+    font-size: 0.95em;
+}
+
+.login-footer a {
+    color: #D32F2F; /* Vermelho tomate */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+    color: #FF5722; /* Laranja mais vivo */
+}
