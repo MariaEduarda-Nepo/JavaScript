@@ -1,10 +1,10 @@
 function exibirMensagem(texto, tipo) {
   const mensagem = document.getElementById("mensagem");
   mensagem.textContent = texto;
-  mensagem.className = `mensagem ${tipo}`; // Adiciona a classe de estilo (sucesso ou erro)
+  mensagem.className = `mensagem ${tipo}`; 
   mensagem.classList.remove("hidden");
 
-  // Remove a mensagem após 3 segundos
+
   setTimeout(() => {
     mensagem.classList.add("hidden");
   }, 3000);
@@ -14,16 +14,16 @@ function validarLogin() {
   const usuario = document.getElementById("usuario").value;
   const senha = document.getElementById("senha").value;
 
-  // Usuário e senha fixos para validação (você pode substituir por algo mais avançado)
+ 
   const usuarioCorreto = "admin";
   const senhaCorreta = "1234";
 
   if (usuario === usuarioCorreto && senha === senhaCorreta) {
     exibirMensagem("Login realizado com sucesso!", "sucesso");
     setTimeout(() => {
-      // Redireciona para a página principal
+      
       window.location.href = "index.html";
-    }, 1000); // Aguarda 1 segundo antes de redirecionar
+    }, 1000); 
   } else {
     exibirMensagem("Usuário ou senha incorretos.", "erro");
   }
@@ -33,14 +33,13 @@ let cardapio = [];
 let pizzaParaAlterar = null;
 
 function mostrarSecao(secao) {
-  // Esconde todas as seções
+
   document.getElementById("cadastro").classList.add("hidden");
   document.getElementById("consulta").classList.add("hidden");
   document.getElementById("alterar").classList.add("hidden");
   document.getElementById("venda").classList.add("hidden");
   document.getElementById("relatorio-vendas").classList.add("hidden");
 
-  // Mostra a seção selecionada
   document.getElementById(secao).classList.remove("hidden");
 }
 
@@ -163,7 +162,7 @@ function registrarVenda() {
   }
 }
 
-// --- Relatório de Vendas ---
+
 function gerarRelatorioVendas() {
   const tabelaRelatorio = document.getElementById("tabela-relatorio-vendas");
   tabelaRelatorio.innerHTML = "";
