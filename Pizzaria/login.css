@@ -1,108 +1,74 @@
 body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background: url('https://via.placeholder.com/1920x1080/FFD700/8B4513?text=Fundo+Pizzaria') no-repeat center center fixed; /* Substitua pela URL da sua imagem de fundo */
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: #333;
-}
-
-.login-container {
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 450px;
-    width: 90%;
-    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
-}
-
-.login-header h1 {
-    font-family: 'Lobster', cursive;
-    color: #D32F2F; /* Vermelho tomate */
-    font-size: 3.5em;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login-header p {
-    color: #555;
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
-
-.login-form h2 {
-    color: #333;
-    margin-bottom: 25px;
-    font-size: 1.8em;
-}
-
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #666;
-    font-size: 1em;
-}
-
-.input-group input[type="text"],
-.input-group input[type="password"] {
-    width: calc(100% - 20px);
-    padding: 12px 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.1em;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input[type="text"]:focus,
-.input-group input[type="password"]:focus {
-    border-color: #D32F2F; /* Vermelho ao focar */
-    outline: none;
-    box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
-}
-
-.login-button {
-    background-color: #4CAF50; /* Verde azeitona */
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.3em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.login-button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
-}
-
-.login-footer {
-    margin-top: 25px;
-    font-size: 0.95em;
-}
-
-.login-footer a {
-    color: #D32F2F; /* Vermelho tomate */
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.login-footer a:hover {
-    text-decoration: underline;
-    color: #FF5722; /* Laranja mais vivo */
-}
+        background: url('https://cdn.pixabay.com/photo/2017/12/05/20/08/pizza-3000273_1280.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        }
+        .container {
+          background: #fffbe7;
+          max-width: 350px;
+          margin: 60px auto 0 auto;
+          padding: 32px 28px 24px 28px;
+          border-radius: 18px;
+          box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+          text-align: center;
+        }
+        h1 {
+          color: #d30058;
+          margin-bottom: 8px;
+          font-size: 2rem;
+          letter-spacing: 1px;
+        }
+        h2 {
+          color: #7f8c8d;
+          font-size: 1.1rem;
+          margin-bottom: 24px;
+        }
+        .form-group {
+          margin-bottom: 18px;
+          text-align: left;
+        }
+        label {
+          display: block;
+          color: #b90e5b;
+          margin-bottom: 6px;
+          font-weight: 500;
+        }
+        input[type="text"], input[type="password"] {
+          width: 100%;
+          padding: 10px 12px;
+          border: 1px solid #e49abb;
+          border-radius: 8px;
+          background: #fffdfa;
+          font-size: 1rem;
+          transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+          border: 1.5px solid #b4216b;
+          outline: none;
+        }
+        button {
+          background: linear-gradient(90deg, #ff478a 0%, #ff33a3 100%);
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          padding: 12px 0;
+          width: 100%;
+          font-size: 1.1rem;
+          font-weight: bold;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(255,179,71,0.13);
+          transition: background 0.2s;
+        }
+        button:hover {
+          background: linear-gradient(90deg, #ff337a 0%, #ff47da 100%);
+        }
+        .mensagem {
+          margin-top: 16px;
+          color: #d31b4c;
+          font-size: 1rem;
+        }
+        .hidden {
+          display: none;
+        }
