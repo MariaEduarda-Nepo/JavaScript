@@ -174,6 +174,17 @@ function gerarRelatorioVendas() {
 
   let totalVendas = 0;
 
+  // Cria o cabeçalho da tabela
+  const cabecalho = document.createElement("tr");
+  cabecalho.innerHTML = `
+      <th>Pizza</th>
+      <th>Quantidade</th>
+      <th>Comprador</th>
+      <th>Total</th>
+    `;
+  tabelaRelatorio.appendChild(cabecalho);
+
+  // Mostra todas as vendas registradas
   vendas.forEach((venda) => {
     const linha = document.createElement("tr");
     linha.innerHTML = `
@@ -187,6 +198,7 @@ function gerarRelatorioVendas() {
     totalVendas += venda.total;
   });
 
+  // Linha de total geral
   const linhaTotal = document.createElement("tr");
   linhaTotal.innerHTML = `
       <td><strong>Total</strong></td>
@@ -197,6 +209,4 @@ function gerarRelatorioVendas() {
   tabelaRelatorio.appendChild(linhaTotal);
 
   document.getElementById("relatorio-vendas").classList.remove("hidden");
-
- 
 }
