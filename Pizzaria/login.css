@@ -16,15 +16,15 @@ body {
             }
             h2::before {
             content: "👤 ";
-          text-shadow: 0 1px 0 #ffb3d9, 0 2px 4px #ffe6f2;
+          text-shadow: 0 2px 0 #211019, 0 2px 4px #373134;
         }
         .container {
-            background: linear-gradient(135deg, #ff0000 0%, #ff9900 20%, #ffee00 40%, #33cc33 60%, #3399ff 80%, #9900cc 100%);
+            background: linear-gradient(2045deg, #ff0000 2%, #ff9900 20%, #ffee00 40%, #33cc33 60%, #3399ff 80%, #9900cc 100%);
           max-width: 350px;
-          margin: 60px auto 0 auto;
-          padding: 32px 28px 24px 28px;
+          margin: 28px auto 0 auto;
+          padding: 20px 34px 28px 28px;
           border-radius: 18px;
-          box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+          box-shadow: 0 6px 28px rgba(0,0,0,0.13);
           text-align: center;
         }
         h1 {
@@ -36,10 +36,10 @@ body {
         h2 {
           color: #7f8c8d;
           font-size: 1.1rem;
-          margin-bottom: 24px;
+          margin-bottom: 1px;
         }
         .form-group {
-          margin-bottom: 18px;
+          margin-bottom: 19px;
           text-align: left;
         }
         label {
@@ -50,7 +50,7 @@ body {
         }
         input[type="text"], input[type="password"] {
           width: 100%;
-          padding: 10px 12px;
+          padding: 12px 2px;
           border: 1px solid #e49abb;
           border-radius: 8px;
           background: #fffdfa;
@@ -62,13 +62,13 @@ body {
           outline: none;
         }
         button {
-          background: linear-gradient(90deg, #ff478a 0%, #ff33a3 100%);
+          background: linear-gradient(40deg, #ff478a 0%, #ff33a3 100%);
           color: #fff;
           border: none;
-          border-radius: 8px;
-          padding: 12px 0;
+          border-radius: 84px;
+          padding: 11px 16px;
           width: 100%;
-          font-size: 1.1rem;
+          font-size: 1.0rem;
           font-weight: bold;
           cursor: pointer;
           box-shadow: 0 2px 8px rgba(255,179,71,0.13);
