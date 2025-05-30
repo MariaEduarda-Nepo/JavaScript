@@ -48,7 +48,7 @@ function adicionarPizza() {
   const ingredientes = document.getElementById("ingredientes").value;
   const preco = parseFloat(document.getElementById("preco").value);
 
-  if (nome && ingredientes && preco) {
+  if (nome && ingredientes && !isNaN(preco) && document.getElementById("preco").value !== "") {
     cardapio.push({ nome, ingredientes, preco });
     document.getElementById("nome").value = "";
     document.getElementById("ingredientes").value = "";
@@ -93,7 +93,7 @@ function alterarPizza() {
       document.getElementById("novos-ingredientes").value;
     const novoPreco = parseFloat(document.getElementById("novo-preco").value);
 
-    if (novoNome && novosIngredientes && novoPreco) {
+    if (novoNome && novosIngredientes && !isNaN(novoPreco) && document.getElementById("novo-preco").value !== "") {
       pizzaParaAlterar.nome = novoNome;
       pizzaParaAlterar.ingredientes = novosIngredientes;
       pizzaParaAlterar.preco = novoPreco;
@@ -132,7 +132,7 @@ function registrarVenda() {
   );
   const comprador = document.getElementById("venda-comprador").value;
 
-  if (nome && quantidade && comprador) {
+  if (nome && !isNaN(quantidade) && document.getElementById("venda-quantidade").value !== "" && comprador) {
     const pizza = cardapio.find(
       (pizza) => pizza.nome.toLowerCase() === nome.toLowerCase()
     );

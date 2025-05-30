@@ -7,16 +7,38 @@
             font-family: 'Ubuntu', sans-serif;
             background: url('https://cdn.pixabay.com/photo/2017/12/05/20/08/pizza-3000273_1280.jpg') no-repeat center center fixed;
             background-size: cover;
-            color: #333;
+            color: #080707;
             margin: 0;
             padding: 0;
             text-align: center;
             
         }
         a {
-            color: #e73c9d;
+            color: #df1547;
             text-decoration: none;
             transition: color 0.3s ease;
+            background: linear-gradient(90deg, #df1547, #e33ca3, #f1438f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+        }
+
+    /* Borda rosa claro nos textos pretos */
+        body, 
+        .container, 
+        label, 
+        input[type="text"], 
+        input[type="number"], 
+        select, 
+        ul li, 
+        td, 
+        .mensagem.sucesso {
+            text-shadow: 0 0 2px #f3b6d1, 0 0 2px #f3b6d1, 0 0 1px #000;
+        }
+
+        * {
+            text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
         }
         .container {
             max-width: 1200px;
@@ -33,21 +55,56 @@
 
 h1 {
     text-align: center;
-    color: #ca258d;
-  
     font-size: 2.5rem;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', 'Ubuntu', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Botões arco-íris em sequência */
+.menu button:nth-child(1) {
+    background-color: #ff0000; /* vermelho */
+}
+.menu button:nth-child(2) {
+    background-color: #ff7f00; /* laranja */
+}
+.menu button:nth-child(3) {
+    background-color: #ffff00; /* amarelo */
+    color: #333;
+}
+.menu button:nth-child(4) {
+    background-color: #00ff00; /* verde */
+    color: #333;
+}
+.menu button:nth-child(5) {
+    background-color: #0000ff; /* azul */
+}
+.menu button:nth-child(6) {
+    background-color: #4b0082; /* anil/índigo */
+}
+.menu button:nth-child(7) {
+    background-color: #9400d3; /* violeta */
+}
+.menu button:hover {
+    filter: brightness(0.85);
 }
 
 h2 {
-    color: #ae2771;
+    color: #dc3875;
     text-align: center;
     margin-bottom: 15px;
     font-size: 1.8rem;
 }
 
 h3 {
-    color: #e62267;
+    color: #dd2968;
  
     margin-bottom: 10px;
 }
@@ -73,7 +130,7 @@ h3 {
 }
 
 .menu button:hover {
-    background-color: #e535a7;
+    background-color: #b0004f;
    
 }
 
@@ -98,7 +155,7 @@ select {
     width: calc(50% - 20px);
     
     padding: 10px;
-    border: 2px solid #e6227d;
+    border: 2px solid #d43e8e;
     
     border-radius: 5px;
     font-size: 1rem;
@@ -120,7 +177,7 @@ input[type="number"]:focus,
 select:focus {
     border-color: #e73c9d;
     
-    box-shadow: 0 0 5px rgba(233, 64, 168, 0.5);
+    box-shadow: 0 0 5px rgba(220, 104, 185, 0.5);
     
     outline: none;
     
@@ -138,7 +195,7 @@ input[type="number"]::placeholder {
 
 
 button {
-    background-color: #ae275f;
+    background-color: #f1438f;
   
     color: white;
     border: none;
@@ -153,8 +210,25 @@ button:hover {
     background-color: #d60f90;
    
 }
-
-
+.menu button,
+button,
+#login button {
+    border: 2px solid #000;
+}
+.menu button {
+    color: #fff !important;
+}
+h1::before,
+h1::after {
+    content: "💖";
+    margin: 0 0.5rem;
+    font-size: 2.5rem;
+    vertical-align: middle;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+    color: initial;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -216,7 +290,7 @@ ul li:hover {
 .mensagem.sucesso {
     background-color: #f3f4f3;
    
-    color: #c30c64;
+    color: #e43b7c;
    
     border: 1px solid #f3f4f3;
 }
