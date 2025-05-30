@@ -28,13 +28,13 @@ body {
           text-align: center;
         }
         h1 {
-          color: #d30058;
+          color: #1d0f15;
           margin-bottom: 8px;
           font-size: 2rem;
           letter-spacing: 1px;
         }
         h2 {
-          color: #7f8c8d;
+          color: #090c0c;
           font-size: 1.1rem;
           margin-bottom: 1px;
         }
@@ -44,7 +44,7 @@ body {
         }
         label {
           display: block;
-          color: #b90e5b;
+          color: #080708;
           margin-bottom: 6px;
           font-weight: 500;
         }
@@ -71,15 +71,15 @@ body {
           font-size: 1.0rem;
           font-weight: bold;
           cursor: pointer;
-          box-shadow: 0 2px 8px rgba(255,179,71,0.13);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
           transition: background 0.2s;
         }
         button:hover {
-          background: linear-gradient(90deg, #ff337a 0%, #ff47da 100%);
+          background: linear-gradient(90deg, #d1538b 0%, #ba11bd 45%);
         }
         .mensagem {
           margin-top: 16px;
-          color: #d31b4c;
+          color: #000000;
           font-size: 1rem;
         }
         .hidden {
