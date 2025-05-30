@@ -164,6 +164,9 @@ function registrarVenda() {
 
 
 function gerarRelatorioVendas() {
+  // Mostra a seção do relatório de vendas somente quando a função é chamada
+  mostrarSecao("relatorio-vendas");
+
   const tabelaRelatorio = document.getElementById("tabela-relatorio-vendas");
   tabelaRelatorio.innerHTML = "";
 
@@ -207,6 +210,4 @@ function gerarRelatorioVendas() {
       <td><strong>R$ ${totalVendas.toFixed(2)}</strong></td>
     `;
   tabelaRelatorio.appendChild(linhaTotal);
-
-  document.getElementById("relatorio-vendas").classList.remove("hidden");
 }
